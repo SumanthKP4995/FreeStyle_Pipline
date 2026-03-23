@@ -7,15 +7,19 @@ pipeline {
             steps {
                 echo 'Checking out source code...'
                	git 'https://github.com/SumanthKP4995/FreeStyle_Pipline'
-		        git branch -a
+		sh ''' git branch -a
+			git status
+			echo "build step complete"
+		'''
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                sh 'echo Build completed'
-		git pull 
+		sh ''' git pull
+                echo "Build completed" '''
+		 
             }
         }
 
