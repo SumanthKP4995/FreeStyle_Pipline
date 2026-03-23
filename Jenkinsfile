@@ -20,6 +20,8 @@ pipeline {
                 sh '''
                   git status
                   git pull origin main
+                  javac Main.java
+                  java Main
                 '''
             }
         }
