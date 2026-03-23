@@ -7,6 +7,9 @@ pipeline {
             steps {
                 echo 'Checking out code'
                 
+                git branch: 'main',
+                    url: 'https://github.com/SumanthKP4995/FreeStyle_Pipline.git'
+
                 sh 'git branch'
             }
         }
@@ -16,7 +19,7 @@ pipeline {
                 echo 'Build stage - Git commands'
                 sh '''
                   git status
-                  git pull
+                  git pull origin main
                 '''
             }
         }
