@@ -1,22 +1,15 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
-                echo 'Building the project'
+                sh 'git status'
+                sh 'git pull'
             }
         }
-
         stage('Test') {
             steps {
-                echo 'Running tests'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying application'
+                sh 'git log -1'
             }
         }
     }
