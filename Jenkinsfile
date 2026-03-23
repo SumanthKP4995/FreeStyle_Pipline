@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Create Directory') {
             steps {
-               sh 'whoami'
-
+              sh 'mkdir -p /var/lib/jenkins/jenkins-pipeline-dir'
             }
         }
     }
