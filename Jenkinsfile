@@ -6,7 +6,6 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out source code...'
-               	git 'https://github.com/SumanthKP4995/FreeStyle_Pipline'
 		sh ''' git branch -a
 			git status
 			echo "build step complete"
