@@ -7,7 +7,7 @@ pipeline {
             steps {
                 echo 'Checking out source code...'
                	git 'https://github.com/SumanthKP4995/FreeStyle_Pipline'
-		git checkout main
+		        git branch checkout main
             }
         }
 
