@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Create Directory') {
             steps {
-              sh 'mkdir -p /home/user3/jenkins-pipeline-dir'
+              sh 'mkdir -p /user3/jenkins-pipeline-dir'
             }
         }
     }
