@@ -6,8 +6,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out source code...'
-                // Uncomment if using Git
-                // git 'https://github.com/your-repo/your-project.git'
+               	git 'https://github.com/SumanthKP4995/FreeStyle_Pipline'
+		git checkout main
             }
         }
 
@@ -15,6 +15,7 @@ pipeline {
             steps {
                 echo 'Building the application...'
                 sh 'echo Build completed'
+		git pull 
             }
         }
 
